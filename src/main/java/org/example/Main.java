@@ -2,7 +2,7 @@ package org.example;
 
 public class Main {
     public static void main(String[] args) {
-        int ans = getGreatestCommonDivisor(15,20);
+        int ans = getGreatestCommonDivisor(1010,10);
         System.out.println(ans);
     }
 
@@ -16,7 +16,7 @@ public class Main {
         int divisorA = 1;
         int divisorB = 1;
 
-        while(divisorA != a && divisorB != b){
+        while(divisorA < a || divisorB < b){
             if(a % divisorA == 0 && b % divisorB == 0){
                 if(divisorA > largestDivisor)
                     largestDivisor = divisorA;
